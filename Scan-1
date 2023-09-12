@@ -1,0 +1,13 @@
+#SCAN-1
+
+#identify the ip address of the nmap using device 
+1. ifconfig
+
+#copy first 3 octets as like 192.168.57
+#run the net discover
+2. netdiscover -r 10.0.2.0/24 #here using arp to discover all of devices on the network
+#ctrl-c for kill the session
+
+#run nmap scanning
+#run stalth scanning
+3. nmap -T4 -p- -A 10.0.2.4 #nmap scan five speed(-T4) all ports(-p-) {-p 80 ot -p 80,443 such for scanning specific ports} everything(-A) of our ip address(10.0.2.4)
